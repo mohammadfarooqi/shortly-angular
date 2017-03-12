@@ -49,7 +49,7 @@ gulp.task('start', ['serve'], function () {
 gulp.task('karma', function (done) {
   new KarmaServer({
     configFile: __dirname + '/karma.conf.js'
-  }, done).start();
+  }, done()).start();
 });
 
 // Use ES5 by default
@@ -65,7 +65,7 @@ gulp.task('clean', function() {
   .pipe(clean({read: false}));
 });
 
-// Transpile our client scripts 
+// Transpile our client scripts
 gulp.task('babel', ['clean'], function() {
   return gulp.src('client/**/*')
     .pipe(babel({
@@ -118,5 +118,5 @@ gulp.task('karma:es6', function(done) {
         return file.originalPath;
       }
     }
-  }, done).start();
+  }, done()).start();
 });

@@ -9,6 +9,14 @@
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <div class="navigation">
+      <ul>
+        <li><a href="#/links" class="index">All Links</a></li>
+        <li><a href="#/shorten" class="create">Shorten</a></li>
+      </ul>
+      <a href="#/logout" class="logout">Logout</a>
+    </div>
+
     <div ng-view></div>
 
     <script src="lib/angular/angular.js"></script>
